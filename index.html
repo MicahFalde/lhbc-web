@@ -3,380 +3,528 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lincoln Highway Baptist Church</title>
-<meta name="description" content="Lincoln Highway Baptist Church — a gospel-centered Baptist church in Dalton, Ohio. Join us Sundays — worship at 10:15 AM.">
+<title>Lincoln Highway Baptist Church · Dalton, Ohio</title>
+<meta name="description" content="An independent Baptist church being planted in Dalton, Ohio. Sunday School 9:00, worship 10:15, Wednesday 6:30. King James preaching, families welcome.">
+<meta name="theme-color" content="#1a1e40">
+<meta property="og:title" content="Lincoln Highway Baptist Church">
+<meta property="og:description" content="A new independent Baptist church in Dalton, Ohio. Sundays at 9:00 and 10:15.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lincolnhighwaybaptist.org/">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=sentient@400,401,500,700&display=swap">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap');
+/* ==================================================================
+   Lincoln Highway Baptist Church
 
-  /* ---------- DESIGN SYSTEM — "Modern" ----------
-     Inspired by the Parakaleo site: navy + white + slate text, Merriweather serif
-     headings, Inter body, small radius, generous white space. */
-  :root{
-    --bg:#ffffff; --bg-alt:#f5f7fb; --surface:#ffffff;
-    --ink:#0f1b2d; --ink-soft:#51607a; --line:#e4e9f1;
-    --primary:#122a52; --primary-deep:#0d1f3d; --accent:#c8102e; --accent-soft:#f8dde0;
-    --on-primary:#ffffff;
-    --font-head:'Merriweather',Georgia,serif; --head-wt:700; --head-tight:-0.01em;
-    --font-body:'Inter',system-ui,sans-serif;
-    --photo-a:#122a52; --photo-b:#37527e; --section-pad:96px; --radius:5px;
-  }
+   The idea: the church is named for a road. The Lincoln Highway was
+   the first road built across America and it runs through Dalton as
+   US-30. The logo is a roadside sign. So the site is roadside signage,
+   and the sign's own geometry (oxblood cap, cream field, navy base) is
+   the one bespoke silhouette, reused as every card.
 
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--font-body);color:var(--ink);background:var(--bg);line-height:1.6;
-    -webkit-font-smoothing:antialiased;transition:background .35s,color .35s}
-  h1,h2,h3,.serif{font-family:var(--font-head);font-weight:var(--head-wt);letter-spacing:var(--head-tight);line-height:1.12;color:var(--ink)}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-  .kicker{font-family:var(--font-body);font-weight:600;font-size:.74rem;letter-spacing:.18em;
-    text-transform:uppercase;color:var(--accent)}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.92rem;
-    padding:13px 26px;border-radius:var(--radius);cursor:pointer;border:1.5px solid transparent;transition:.18s;font-family:var(--font-body)}
-  .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-  .btn-primary:hover{filter:brightness(1.07)}
-  .btn-ghost{background:transparent;color:var(--on-primary);border-color:rgba(255,255,255,.45)}
-  .btn-ghost:hover{background:rgba(255,255,255,.12)}
-  .btn-outline{background:transparent;color:var(--primary);border-color:var(--line)}
-  .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+   Palette is sampled from the sign itself, not chosen off a shelf.
+   Display type is Sentient (Fontshare); body is system-ui, a genuine
+   neutral rather than a fashionable sans.
+   ================================================================== */
+:root{
+  --ink:#1a1e40;
+  --navy:#252a55;
+  --navy-lift:#2f3564;
+  --oxblood:#7d1f2c;
+  --oxblood-lift:#94293a;
+  --cream:#f3eee0;
+  --paper:#faf7ef;
+  --cream-edge:#e4dcc7;
+  --muted:#565b86;
+  --muted-on-navy:#a8adcf;
+  --gold:#dcc9a3;
 
-  /* ---------- header ---------- */
-  header.site{position:sticky;top:0;z-index:70;background:var(--primary);color:var(--on-primary);
-    border-bottom:1px solid rgba(255,255,255,.08);transition:background .35s}
-  .topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;height:74px}
-  .logo{display:flex;align-items:center;gap:13px}
-  .crest{width:40px;height:40px;flex-shrink:0}
-  .logo .wm{line-height:1.05}
-  .logo .wm b{font-family:var(--font-head);font-weight:var(--head-wt);font-size:1.12rem;display:block;letter-spacing:.01em}
-  .logo .wm span{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;opacity:.75}
-  nav.main{display:flex;align-items:center;gap:26px}
-  nav.main a{font-size:.86rem;font-weight:500;opacity:.9;transition:.15s;position:relative;padding:4px 0}
-  nav.main a:hover{opacity:1}
-  nav.main a:hover::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:var(--accent)}
-  .header-cta{display:flex;align-items:center;gap:16px}
-  .times-chip{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;font-size:.72rem;opacity:.85}
-  .times-chip b{font-size:.86rem;letter-spacing:.02em;opacity:1}
-  .menu-btn{display:none;background:none;border:none;color:var(--on-primary);font-size:1.5rem;cursor:pointer}
+  --display:'Sentient',ui-serif,Georgia,'Times New Roman',serif;
+  --body:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --gut:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:clamp(1rem,.96rem + .2vw,1.09rem);line-height:1.65;
+  overflow-x:clip;-webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.07;margin:0}
+h2{font-size:clamp(1.8rem,1.35rem + 1.55vw,2.5rem)}
+p{margin:0 0 1em}
+a{color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-  /* ---------- hero ---------- */
-  .hero{background:var(--primary);color:var(--on-primary);position:relative;overflow:hidden}
-  .hero::before{content:"";position:absolute;inset:0;opacity:.10;
-    background:radial-gradient(circle at 85% 18%, var(--accent) 0, transparent 38%),
-               radial-gradient(circle at 10% 100%, #fff 0, transparent 30%)}
-  .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;
-    padding:78px 0 88px}
-  .hero h1{color:var(--on-primary);font-size:clamp(2.5rem,5vw,4rem);margin:18px 0 20px;font-weight:var(--head-wt)}
-  .hero p.lead{font-size:1.12rem;opacity:.9;max-width:30em;margin-bottom:32px}
-  .hero .kicker{color:var(--accent)}
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-  .arch{position:relative;border-radius:240px 240px 14px 14px;overflow:hidden;min-height:430px;
-    box-shadow:0 24px 60px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.14)}
+/* Fine paper grain, on the substrate only, never over type. */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3'/><feColorMatrix type='saturate' values='0'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='.05'/></svg>");
+}
+.wrap{position:relative;z-index:1}
+.shell{max-width:1180px;margin:0 auto;padding-inline:var(--gut)}
 
-  /* photo placeholders — intentional duotone blocks (real photos drop in here) */
-  .photo{position:relative;background:linear-gradient(150deg,var(--photo-a),var(--photo-b));display:grid;place-items:center;overflow:hidden}
-  .photo::after{content:attr(data-cap);position:absolute;bottom:0;left:0;right:0;
-    font:500 .72rem/1.3 var(--font-body);color:rgba(255,255,255,.92);
-    background:linear-gradient(transparent,rgba(0,0,0,.45));padding:34px 16px 12px;letter-spacing:.02em}
-  .photo .ph-ico{width:64px;height:64px;opacity:.5}
+/* ---------- the sign plaque ---------- */
+.plaque{position:relative;background:var(--cream);border-radius:14px;overflow:hidden;
+  box-shadow:inset 0 0 0 1px var(--cream-edge)}
+.plaque::before{content:"";position:absolute;top:0;left:0;right:0;height:9px;background:var(--oxblood)}
+.plaque::after{content:"";position:absolute;bottom:0;left:0;right:0;height:9px;background:var(--navy)}
+/* padding clears both bars by a wide margin so no line of type is ever shaved by the cut */
+.plaque-in{position:relative;padding:36px 28px 34px}
 
-  /* ---------- generic section ---------- */
-  section.band{padding:var(--section-pad) 0}
-  .band.alt{background:var(--bg-alt)}
-  .sec-head{max-width:42em;margin-bottom:46px}
-  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-  .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin:12px 0 14px}
-  .sec-head p{color:var(--ink-soft);font-size:1.05rem}
+/* ---------- header ---------- */
+.top{position:relative;z-index:5;background:var(--navy);color:var(--cream)}
+.top-in{display:flex;align-items:center;gap:18px;max-width:1180px;margin:0 auto;padding:14px var(--gut)}
+.mark{display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;flex:1 1 auto;min-width:0}
+.mark svg{flex:0 0 auto}
+.mark b{font-family:var(--display);font-weight:700;font-size:1.04rem;display:block;line-height:1.2}
+.mark i{display:block;font-style:normal;font-size:.83rem;color:var(--muted-on-navy);line-height:1.45}
+.nav{display:flex;gap:clamp(16px,2vw,28px);align-items:center}
+.nav a{font-size:.93rem;text-decoration:none;color:#cdd2ec;padding:6px 0;transition:color .18s ease}
+.nav a:hover{color:#fff}
+.nav a[aria-current]{color:#fff;font-weight:600}
+@media(max-width:880px){
+  .top-in{flex-wrap:wrap;gap:10px 18px;padding-bottom:12px}
+  .nav{flex-wrap:wrap;gap:6px 16px;width:100%}
+  .nav a{font-size:.86rem;padding:2px 0}
+}
 
-  /* welcome */
-  .welcome-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}
-  .welcome-grid .photo{border-radius:6px;min-height:360px}
-  .pastor-card{display:flex;align-items:center;gap:14px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
-  .pastor-card .pic{width:54px;height:54px;border-radius:50%;flex-shrink:0}
-  .pastor-card b{display:block;font-family:var(--font-head)}
-  .pastor-card span{font-size:.85rem;color:var(--ink-soft)}
+/* ---------- hero ----------
+   Deliberately not the eyebrow/headline/subline/two-buttons preset. The scripture is the largest
+   type on the page and the marketing sentence sits under it, subordinate. One action, not a pair. */
+.hero{position:relative;background:var(--navy);color:var(--cream)}
+.scene{display:block;width:100%;height:clamp(230px,34vw,410px)}
+.hero-copy{position:relative;max-width:1180px;margin:0 auto;padding:clamp(40px,5.4vw,72px) var(--gut) clamp(44px,6vw,76px)}
+.scripture{font-family:var(--display);font-style:italic;font-weight:400;
+  font-size:clamp(1.65rem,1.1rem + 2.6vw,3.4rem);line-height:1.22;color:var(--gold);
+  margin:0;max-width:26ch;letter-spacing:-.004em}
+.ref{margin:16px 0 0;font-size:.92rem;color:var(--muted-on-navy)}
+h1{font-size:clamp(1.3rem,1.12rem + .8vw,1.75rem);font-weight:700;max-width:26ch;
+  margin:clamp(30px,4vw,46px) 0 0;color:var(--cream)}
+.hero-sub{margin:14px 0 0;max-width:48ch;color:#cdd2ec}
+.hero-act{margin-top:30px}
+.act{display:inline-flex;align-items:center;gap:11px;background:var(--oxblood);color:#fdf9f1;
+  text-decoration:none;font-weight:600;font-size:1rem;padding:15px 24px;border-radius:10px;
+  box-shadow:inset 0 0 0 1px var(--oxblood-lift);transition:background .18s ease}
+.act:hover{background:var(--oxblood-lift)}
+.act svg,.go svg{transition:transform .22s cubic-bezier(.2,.7,.3,1)}
+.act:hover svg,.go:hover svg{transform:translate(3px,-3px)}
 
-  /* plan a visit */
-  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-  .visit-facts{display:grid;gap:2px;margin:24px 0 30px}
-  .fact{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
-  .fact .ic{width:26px;color:var(--accent);flex-shrink:0;margin-top:2px}
-  .fact b{display:block;font-size:.95rem}
-  .fact span{font-size:.9rem;color:var(--ink-soft)}
-  .expect{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
-  .expect .item h4{font-family:var(--font-head);font-size:1.05rem;margin-bottom:5px}
-  .expect .item p{font-size:.88rem;color:var(--ink-soft)}
+/* ---------- times ---------- */
+.times{background:var(--cream);color:var(--ink);border-top:2px solid var(--oxblood)}
+.times-in{max-width:1180px;margin:0 auto;padding:clamp(34px,4vw,52px) var(--gut);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px)}
+@media(max-width:760px){.times-in{grid-template-columns:1fr}}
+/* tracked caps are used here and nowhere else: this is the one genuinely label-like piece of data */
+.slot .day{display:block;font-size:.73rem;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--oxblood);font-weight:700}
+.slot .hour{display:block;font-family:var(--display);font-weight:700;
+  font-size:clamp(1.7rem,1.3rem + 1.1vw,2.25rem);margin:5px 0 6px;letter-spacing:.015em}
+.slot .what{display:block;color:var(--muted);font-size:.95rem;line-height:1.5}
+.times-note{grid-column:1/-1;margin:4px 0 0;font-size:.93rem;color:var(--muted);max-width:64ch}
 
-  /* sermon */
-  .sermon{background:var(--primary);color:var(--on-primary)}
-  .sermon .sec-head h2,.sermon .sec-head p{color:var(--on-primary)}
-  .sermon .sec-head p{opacity:.82}
-  .sermon-card{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:var(--radius);overflow:hidden;
-    background:var(--primary-deep);border:1px solid rgba(255,255,255,.12)}
-  .sermon-card .photo{min-height:300px}
-  .play{position:absolute;inset:0;display:grid;place-items:center}
-  .play .disc{width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;
-    box-shadow:0 8px 24px rgba(0,0,0,.3)}
-  .play .disc svg{margin-left:4px}
-  .sermon-meta{padding:40px}
-  .sermon-meta .kicker{color:var(--accent)}
-  .sermon-meta h3{color:var(--on-primary);font-size:1.7rem;margin:12px 0 8px}
-  .sermon-meta .ref{opacity:.8;font-size:.95rem;margin-bottom:6px}
-  .sermon-meta .by{opacity:.65;font-size:.85rem;margin-bottom:26px}
+/* ---------- bands ---------- */
+.band{padding-block:clamp(56px,7vw,104px)}
+.band-navy{background:var(--navy);color:var(--cream)}
+.band-navy h2{color:var(--cream)}
+.band-navy p{color:#cdd2ec}
+.two{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(26px,5vw,72px);align-items:start}
+@media(max-width:880px){.two{grid-template-columns:1fr;gap:24px}}
+.prose{max-width:62ch}
+.lede{font-family:var(--display);font-weight:500;font-size:clamp(1.14rem,1.04rem + .55vw,1.48rem);
+  line-height:1.45;max-width:32ch}
 
-  /* beliefs + next steps */
-  .belief-band{text-align:center}
-  .belief-statement{font-family:var(--font-head);font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.4;
-    max-width:22em;margin:0 auto 14px;color:var(--ink)}
-  .belief-statement .accent{color:var(--accent)}
-  .creed{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left;max-width:980px;margin:46px auto 12px}
-  .creed .c{padding:6px 18px;border-left:2px solid var(--accent)}
-  .creed h4{font-family:var(--font-head);font-size:1.06rem;margin-bottom:5px}
-  .creed p{font-size:.86rem;color:var(--ink-soft);line-height:1.5}
-  .creed-note{font-size:.82rem;color:var(--ink-soft);max-width:46em;margin:4px auto 0}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px;text-align:left}
-  .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.18s}
-  .step:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.07)}
-  .step .ic{width:42px;height:42px;border-radius:50%;background:var(--accent-soft);color:var(--accent);
-    display:grid;place-items:center;margin-bottom:18px}
-  .step h3{font-size:1.25rem;margin-bottom:8px}
-  .step p{font-size:.92rem;color:var(--ink-soft);margin-bottom:16px}
-  .step a{font-weight:600;font-size:.88rem;color:var(--accent);display:inline-flex;gap:6px;align-items:center}
+/* ---------- beliefs ---------- */
+.creed{list-style:none;margin:0;padding:0}
+.creed li{padding:20px 0;border-top:1px solid rgba(168,173,207,.26);
+  display:grid;grid-template-columns:minmax(150px,.3fr) 1fr;gap:6px 30px}
+.creed li:last-child{border-bottom:1px solid rgba(168,173,207,.26)}
+.creed b{font-family:var(--display);font-weight:700;font-size:1.07rem;color:var(--cream)}
+.creed span{color:#c3c8e6;font-size:.98rem}
+@media(max-width:700px){.creed li{grid-template-columns:1fr;gap:3px}}
 
-  /* footer */
-  footer.site{background:var(--primary-deep);color:var(--on-primary);padding:64px 0 28px}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:46px;border-bottom:1px solid rgba(255,255,255,.12)}
-  .foot-grid h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;opacity:.6;margin-bottom:16px;font-family:var(--font-body);font-weight:600}
-  .foot-grid a,.foot-grid p{display:block;font-size:.9rem;opacity:.85;margin-bottom:9px}
-  .foot-grid a:hover{opacity:1;color:var(--accent)}
-  .foot-logo b{font-family:var(--font-head);font-size:1.3rem;display:block;margin-bottom:6px}
-  .foot-logo p{opacity:.7;max-width:24em}
-  .foot-map{margin-top:10px;height:120px;border-radius:6px;border:1px solid rgba(255,255,255,.15);
-    background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02));position:relative;overflow:hidden}
-  .foot-map::after{content:"📍 Map — address goes here";position:absolute;inset:0;display:grid;place-items:center;font-size:.78rem;opacity:.55}
-  .copyright{padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;opacity:.6}
+/* ---------- visit ---------- */
+.grid3{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.2vw,24px);margin-top:36px}
+@media(max-width:720px){.grid3{grid-template-columns:1fr}}
+.grid3 h3{font-size:1.16rem;margin-bottom:9px}
+.grid3 p{color:var(--muted);font-size:.97rem;margin:0}
 
-  @media(max-width:860px){
-    nav.main{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;gap:0;
-      background:var(--primary);padding:6px 0;box-shadow:0 14px 28px rgba(0,0,0,.22);border-top:1px solid rgba(255,255,255,.08)}
-    nav.main.open{display:flex}
-    nav.main a{padding:13px 22px;width:100%;font-size:.95rem}
-    nav.main a:hover::after{display:none}
-    .times-chip{display:none}
-    .menu-btn{display:block}
-    .hero-grid,.welcome-grid,.visit-grid,.sermon-card,.foot-grid{grid-template-columns:1fr;gap:34px}
-    .steps,.expect,.creed{grid-template-columns:1fr}
-    .arch{min-height:320px;order:-1}
-  }
+/* ---------- pastor ---------- */
+.pastor{display:grid;grid-template-columns:minmax(0,250px) minmax(0,1fr);gap:clamp(24px,4vw,54px);align-items:start}
+@media(max-width:760px){.pastor{grid-template-columns:1fr}}
+.portrait{border-radius:14px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--cream-edge);
+  aspect-ratio:4/5;display:grid;place-items:center;text-align:center;padding:20px}
+.portrait span{font-size:.95rem;color:#7c7358;line-height:1.6}
+
+/* ---------- reach ---------- */
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));
+  gap:clamp(18px,2.5vw,26px);margin-top:34px}
+.pair .plaque{display:flex}
+.pair .plaque-in{display:flex;flex-direction:column;gap:10px;width:100%}
+.pair h3{font-size:1.26rem}
+.pair p{color:var(--muted);margin:0}
+/* anchored to the bottom of every card so the row of links sits on one line across all three */
+.go{margin-top:auto;padding-top:16px;font-weight:600;color:var(--oxblood);text-decoration:none;
+  display:inline-flex;gap:9px;align-items:center;align-self:flex-start}
+.mailto{color:var(--ink);font-weight:600;text-decoration:none;
+  border-bottom:1.5px solid var(--cream-edge);transition:border-color .18s ease}
+.mailto:hover{border-color:var(--oxblood)}
+
+/* ---------- footer ---------- */
+.foot{background:var(--navy);color:var(--cream);padding-top:clamp(48px,6vw,80px);overflow:hidden}
+.foot-cols{max-width:1180px;margin:0 auto;padding-inline:var(--gut);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:30px clamp(24px,4vw,56px)}
+.foot h4{font-size:1.02rem;margin:0 0 10px}
+.foot p{color:#c3c8e6;font-size:.95rem;margin:0 0 5px}
+.foot a{color:#c3c8e6;text-decoration:none;transition:color .18s ease}
+.foot a:hover{color:#fff}
+.colophon{max-width:1180px;margin:clamp(34px,5vw,58px) auto 0;padding-inline:var(--gut);
+  display:flex;flex-wrap:wrap;gap:6px 28px;font-size:.85rem;color:#8f95c0}
+/* Oversized wordmark: top layer, flush to the bottom edge, real air above, generous tracking,
+   quiet tonal navy so it reads as a watermark rather than a shout. No glyph is clipped. */
+.wordmark{margin-top:clamp(30px,4vw,48px);display:block}
+.wordmark svg{display:block;width:100%;height:auto}
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<!-- ===== HEADER ===== -->
-<header class="site">
-  <div class="wrap topbar">
-    <a class="logo" href="#top">
-      <svg class="crest" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <rect x="2" y="2" width="44" height="44" rx="3" stroke="var(--accent)" stroke-width="1.5" opacity=".6"/>
-        <path d="M24 9v9M19.5 13.5h9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
-        <path d="M14 39V25l10-8 10 8v14" stroke="var(--on-primary)" stroke-width="1.8" stroke-linejoin="round"/>
-        <path d="M21 39v-7h6v7" stroke="var(--on-primary)" stroke-width="1.6"/>
+<header class="top">
+  <div class="top-in">
+    <a class="mark" href="#top" aria-label="Lincoln Highway Baptist Church, home">
+      <!-- The sign in miniature. Monogram is centred on both axes inside the cream field. -->
+      <svg width="33" height="41" viewBox="0 0 33 41" aria-hidden="true">
+        <rect width="33" height="41" rx="4" fill="#f3eee0"/>
+        <path d="M0 4a4 4 0 0 1 4-4h25a4 4 0 0 1 4 4v2.5H0Z" fill="#7d1f2c"/>
+        <path d="M0 34.5h33V37a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4Z" fill="#252a55"/>
+        <g fill="#252a55" transform="translate(1.45,3.3)">
+          <rect x="12.5" y="7.3" width="3.1" height="19.8"/>
+          <rect x="8.8" y="13.5" width="10.4" height="3.1"/>
+          <rect x="12.5" y="24" width="8.8" height="3.1"/>
+        </g>
       </svg>
-      <span class="wm"><b>Lincoln Highway</b><span>Baptist Church</span></span>
+      <span><b>Lincoln Highway</b><i>Baptist Church</i></span>
     </a>
-    <nav class="main">
-      <a href="#visit">I'm New</a>
-      <a href="#welcome">About</a>
-      <a href="#sermon">Sermons</a>
-      <a href="#steps">Connect</a>
-      <a href="#give">Give</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#gather">Gather</a>
+      <a href="#road">Who we are</a>
+      <a href="#believe">What we believe</a>
+      <a href="#visit">Plan a visit</a>
+      <a href="#reach">Reach us</a>
     </nav>
-    <div class="header-cta">
-      <div class="times-chip"><span>Sun Worship</span><b>10:15 AM</b></div>
-      <a class="btn btn-primary" href="#visit">Plan a Visit</a>
-      <button class="menu-btn" aria-label="Menu">☰</button>
-    </div>
   </div>
 </header>
 
-<a id="top"></a>
-<!-- ===== HERO ===== -->
+<main id="top">
+
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="wrap hero-grid">
+  <svg class="scene" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" role="img"
+       aria-label="A road running out through Ohio farmland at dusk, with the church's roadside sign standing on the shoulder.">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#171b3a"/><stop offset=".62" stop-color="#232850"/>
+        <stop offset="1" stop-color="#3a3a5e"/>
+      </linearGradient>
+      <linearGradient id="tarmac" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#565b8c"/><stop offset="1" stop-color="#2c3160"/>
+      </linearGradient>
+      <clipPath id="frame"><rect width="1440" height="420"/></clipPath>
+    </defs>
+    <g clip-path="url(#frame)">
+      <rect width="1440" height="420" fill="url(#sky)"/>
+
+      <!-- one low sun on the horizon: a single disc, no halo rings behind it -->
+      <circle cx="1104" cy="299" r="34" fill="#e6c891"/>
+
+      <!-- far treeline, sitting on the horizon -->
+      <path d="M0 300q62-16 112-3 54-19 108-4 48-21 100-6 60-17 116 0 56-19 112-2 62-15 120 2
+               58-15 114 2 54-13 110 0 60-11 118 4 58-13 116 0 62-9 122 6 54-11 114 2v122H0Z"
+            fill="#1c2043"/>
+
+      <!-- fields: solid warm bands so they read as lit ground, not a wash over the sky -->
+      <path d="M0 303h1440v19H0Z" fill="#6b6550"/>
+      <path d="M0 322h1440v28H0Z" fill="#877b5f"/>
+      <path d="M0 350h1440v34H0Z" fill="#a4966f"/>
+      <path d="M0 384h1440v36H0Z" fill="#c0b184"/>
+      <g stroke="#5f5945" stroke-width="1.5" opacity=".5">
+        <path d="M120 420 520 306"/><path d="M300 420 600 306"/><path d="M-60 420 440 306"/>
+        <path d="M1320 420 940 306"/><path d="M1140 420 880 306"/><path d="M1500 420 1010 306"/>
+      </g>
+
+      <!-- the road, with centre line dashes narrowing into the distance -->
+      <path d="M690 303h68l264 117H392Z" fill="url(#tarmac)"/>
+      <g fill="#e6dcc0" opacity=".8">
+        <path d="M719 306h5l7 15h-8Z"/>
+        <path d="M732 332h8l12 23h-13Z"/>
+        <path d="M755 368h13l19 34h-20Z"/>
+      </g>
+
+      <!-- a barn and silo, because this is farm country and specifics beat abstraction -->
+      <g transform="translate(168 244)">
+        <path d="M0 22 34 0l34 22v37H0Z" fill="#5e2029"/>
+        <path d="M0 22 34 0l34 22-34 8Z" fill="#7d1f2c"/>
+        <rect x="27" y="40" width="15" height="19" fill="#2a2e56"/>
+        <path d="M74 20a8 8 0 0 1 16 0v39H74Z" fill="#4a4f7d"/>
+      </g>
+
+      <!-- fence line receding along the shoulder -->
+      <g fill="#4a4470">
+        <rect x="1206" y="292" width="5" height="26"/><rect x="1116" y="296" width="4" height="21"/>
+        <rect x="1046" y="299" width="3.4" height="17"/><rect x="992" y="301" width="3" height="14"/>
+        <rect x="950" y="302" width="2.6" height="12"/>
+        <path d="M950 305h262v3.4H950Z" opacity=".75"/>
+      </g>
+
+      <!-- the church's own sign, standing on the shoulder; monogram centred in its field -->
+      <g transform="translate(436 160)">
+        <rect x="53" y="150" width="14" height="104" fill="#262a52"/>
+        <rect width="120" height="156" rx="9" fill="#f3eee0"/>
+        <path d="M0 9a9 9 0 0 1 9-9h102a9 9 0 0 1 9 9v19H0Z" fill="#7d1f2c"/>
+        <path d="M0 128h120v19a9 9 0 0 1-9 9H9a9 9 0 0 1-9-9Z" fill="#252a55"/>
+        <!-- one upright serving as both the cross and the L; the foot turns right at the base -->
+        <g fill="#252a55" transform="translate(2,11)">
+          <rect x="48" y="28" width="12" height="76"/>
+          <rect x="34" y="52" width="40" height="12"/>
+          <rect x="48" y="92" width="34" height="12"/>
+        </g>
+      </g>
+    </g>
+  </svg>
+
+  <div class="hero-copy">
+    <p class="scripture">&ldquo;And an highway shall be there, and a way, and it shall be called The way of holiness.&rdquo;</p>
+    <p class="ref">Isaiah 35:8, King James Version</p>
+    <h1>A church being planted on the old road through Dalton, Ohio.</h1>
+    <p class="hero-sub">We take our name from the first road built across America, which still runs
+      through this town, and from the older Way it points to. Independent Baptist, plainly preached,
+      families welcome.</p>
+    <div class="hero-act">
+      <a class="act" href="#visit">Plan your first visit
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor"
+             stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3.5 11.5 11.5 3.5M5.5 3.5h6v6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMES ============ -->
+<section class="times" id="gather" aria-labelledby="gather-h">
+  <h2 id="gather-h" class="sr">When we gather</h2>
+  <div class="times-in">
+    <div class="slot"><span class="day">Sunday</span><span class="hour">9:00 AM</span>
+      <span class="what">Sunday School, with classes for every age</span></div>
+    <div class="slot"><span class="day">Sunday</span><span class="hour">10:15 AM</span>
+      <span class="what">Morning worship and preaching</span></div>
+    <div class="slot"><span class="day">Wednesday</span><span class="hour">6:30 PM</span>
+      <span class="what">Midweek Bible study and prayer</span></div>
+    <p class="times-note">We meet in <b>Dalton, Ohio</b>. The meeting place is being settled now.
+      <a class="mailto" href="mailto:office@lhbcohio.org?subject=Where%20are%20you%20meeting%3F">Write to us</a>
+      and we will tell you where to come.</p>
+  </div>
+</section>
+
+<!-- ============ WHO WE ARE ============ -->
+<section class="band" id="road" aria-labelledby="road-h">
+  <div class="shell two">
     <div>
-      <span class="kicker" id="heroKicker">Grace &amp; Truth · Dalton, Ohio</span>
-      <h1>A gospel-centered church on the Lincoln Highway.</h1>
-      <p class="lead">We're a Baptist church gathering each Sunday to worship Christ, sit under His Word,
-        and grow together as a family of faith. Whoever you are, there's a seat for you here.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#visit">Plan Your Visit →</a>
-        <a class="btn btn-ghost" href="#beliefs">What We Believe</a>
-      </div>
+      <h2 id="road-h">Named for a road that goes somewhere.</h2>
+      <p class="lede" style="margin-top:20px;color:var(--oxblood)">The Lincoln Highway was the first
+        road built to cross the United States. It still runs through Dalton.</p>
     </div>
-    <div class="arch photo" data-cap="Photo: the congregation gathered on a Sunday morning">
-      <svg class="ph-ico" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.2" opacity=".55"><path d="M12 3v18M7 8h10M5 21V11l7-5 7 5v10"/></svg>
+    <div class="prose">
+      <p>Before the interstates, there was one road stitched together out of farm lanes and main
+        streets so that a person could drive from New York to San Francisco. It came through Ohio,
+        and it came through Dalton. It is very likely the road you are on right now.</p>
+      <p>We took the name because a road is a plain thing with a plain purpose. It is not a
+        destination. It exists to get you somewhere, and every mile of it is a decision to keep
+        going in one direction.</p>
+      <p>Lincoln Highway Baptist Church is a new work, sent out from <b>First Baptist Church of
+        Jackson</b> in Massillon, where our people were taught, baptised and sent. We are independent
+        and Baptist by conviction, and we preach from the King James Bible without ornament.</p>
+      <p>We are small, and we are new. If you come, you will not disappear into a crowd. That is
+        either exactly what you are hoping for or exactly what you are afraid of. Either way, come.</p>
     </div>
   </div>
 </section>
 
-<!-- ===== WELCOME / ABOUT ===== -->
-<section class="band alt" id="welcome">
-  <div class="wrap welcome-grid">
-    <div class="photo" data-cap="Photo: Pastor Ed Kramer with the congregation"><svg class="ph-ico" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.2" opacity=".5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+<!-- ============ BELIEFS ============ -->
+<section class="band band-navy" id="believe" aria-labelledby="believe-h">
+  <div class="shell">
+    <div class="two" style="align-items:end;margin-bottom:clamp(28px,4vw,46px)">
+      <h2 id="believe-h">What we believe, stated plainly.</h2>
+      <p style="max-width:52ch;margin:0">We would rather you know exactly what you are walking into.
+        Nothing here waits until your third visit.</p>
+    </div>
+    <ul class="creed">
+      <li><b>The Scriptures</b><span>The Bible is the inspired, inerrant Word of God. Sixty-six books,
+        the only complete and final authority for faith and practice. We preach and read from the
+        King James Version.</span></li>
+      <li><b>God</b><span>One true God, eternally existing in three persons, Father, Son and Holy
+        Spirit, equal in every divine perfection.</span></li>
+      <li><b>Jesus Christ</b><span>Conceived of the Holy Spirit and born of the virgin Mary. He lived
+        without sin, died in the place of sinners, rose bodily the third day, and ascended.</span></li>
+      <li><b>Salvation</b><span>A gift of God, by grace, through personal faith in Christ alone. The
+        new birth is instantaneous rather than a process, and the believer is eternally secure.</span></li>
+      <li><b>The Church</b><span>A living body with Christ as its Head. The local church is a
+        congregation of baptised believers joined by covenant to worship, to disciple, and to go.</span></li>
+      <li><b>The Ordinances</b><span>Baptism by immersion, once, after faith. The Lord's Supper, kept
+        as a memorial by born-again members of the church.</span></li>
+      <li><b>Things to Come</b><span>Christ will take the church to Himself before the Tribulation,
+        then return personally, bodily and visibly to establish His kingdom.</span></li>
+      <li><b>Separation</b><span>Believers from worldly practice, the church from false teaching, and
+        the church from the state.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="band" id="visit" aria-labelledby="visit-h">
+  <div class="shell">
+    <h2 id="visit-h">Coming for the first time</h2>
+    <p class="lede" style="margin-top:18px;color:var(--muted);max-width:46ch">Everything you would
+      otherwise have to guess at.</p>
+    <div class="grid3">
+      <article class="plaque"><div class="plaque-in">
+        <h3>What to wear</h3>
+        <p>Come in what you have. You will see suits and you will see jeans, and nobody is keeping
+          count. We would far rather have you here in what you own than not here at all.</p>
+      </div></article>
+      <article class="plaque"><div class="plaque-in">
+        <h3>How long it lasts</h3>
+        <p>Sunday School runs about an hour, then a short break before worship at 10:15. The morning
+          service is usually finished a little after 11:30. Singing, prayer, and preaching straight
+          out of the text.</p>
+      </div></article>
+      <article class="plaque"><div class="plaque-in">
+        <h3>Bringing children</h3>
+        <p>Please do. There are classes for every age during Sunday School, and children are welcome
+          in the service. Nobody here is bothered by the noise a child makes.</p>
+      </div></article>
+      <article class="plaque"><div class="plaque-in">
+        <h3>Will I be singled out?</h3>
+        <p>No. We will be glad you came and we will say so, but you will not be asked to stand, to
+          give, or to fill anything in. Sit in the back if you would rather.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASTOR ============ -->
+<section class="band" style="padding-top:0" aria-labelledby="pastor-h">
+  <div class="shell pastor">
+    <div class="portrait"><span>Photograph coming soon</span></div>
     <div>
-      <span class="kicker">Welcome</span>
-      <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem);margin:12px 0 16px">We're glad you found us.</h2>
-      <p style="color:var(--ink-soft);font-size:1.06rem;margin-bottom:14px">
-        Lincoln Highway Baptist Church is a new congregation with old convictions — that the Bible is
-        true, that Jesus Christ is Lord, and that the local church is where ordinary people are changed
-        by an extraordinary God. We keep it simple: faithful preaching, heartfelt worship, and real
-        community.</p>
-      <p style="color:var(--ink-soft);font-size:1.06rem">
-        You don't need to dress up, know the Bible, or have it all figured out. Come as you are — we'd
-        love to meet you.</p>
-      <div class="pastor-card">
-        <div class="pic photo" data-cap=""></div>
-        <div><b>Pastor Ed Kramer</b><span>Lead Pastor</span></div>
+      <h2 id="pastor-h" style="font-size:clamp(1.6rem,1.3rem + 1.2vw,2.2rem)">Pastor Ed Kramer</h2>
+      <div class="prose" style="margin-top:16px">
+        <p>Ed pastors Lincoln Highway Baptist Church. He was sent out of First Baptist Church of
+          Jackson in Massillon, Ohio, where he served and trained before this work began.</p>
+        <p>He would genuinely rather answer your question himself than have you read around it here.
+          Write to him at <a class="mailto" href="mailto:Ekramer@lhbcohio.org">Ekramer@lhbcohio.org</a>.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PLAN A VISIT ===== -->
-<section class="band" id="visit">
-  <div class="wrap visit-grid">
+<!-- ============ REACH ============ -->
+<section class="band" style="padding-top:0" id="reach" aria-labelledby="reach-h">
+  <div class="shell">
+    <h2 id="reach-h">Reach us</h2>
+    <div class="pair">
+      <article class="plaque"><div class="plaque-in">
+        <h3>Questions, prayer, or where to park</h3>
+        <p>The church office reads everything that comes in, and a person answers it.</p>
+        <p><a class="mailto" href="mailto:office@lhbcohio.org">office@lhbcohio.org</a></p>
+        <a class="go" href="mailto:office@lhbcohio.org?subject=Hello%20from%20the%20website">Write to the office
+          <svg width="14" height="14" viewBox="0 0 15 15" fill="none" stroke="currentColor"
+               stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3.5 11.5 11.5 3.5M5.5 3.5h6v6"/></svg></a>
+      </div></article>
+      <article class="plaque"><div class="plaque-in">
+        <h3>Giving</h3>
+        <p>Online giving is being set up now. Until it opens, gifts are received in the offering on
+          Sunday, with every designation recorded and receipted.</p>
+        <a class="go" href="mailto:office@lhbcohio.org?subject=Giving">Ask about giving
+          <svg width="14" height="14" viewBox="0 0 15 15" fill="none" stroke="currentColor"
+               stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3.5 11.5 11.5 3.5M5.5 3.5h6v6"/></svg></a>
+      </div></article>
+      <article class="plaque"><div class="plaque-in">
+        <h3>Sermons</h3>
+        <p>Recordings go up here once we are gathering regularly. If you would like to be told when
+          that happens, say so and we will write to you.</p>
+        <a class="go" href="mailto:office@lhbcohio.org?subject=Tell%20me%20when%20sermons%20are%20posted">Tell me when
+          <svg width="14" height="14" viewBox="0 0 15 15" fill="none" stroke="currentColor"
+               stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3.5 11.5 11.5 3.5M5.5 3.5h6v6"/></svg></a>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-cols">
     <div>
-      <span class="kicker">Plan Your Visit</span>
-      <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem);margin:12px 0 8px">What to expect on Sunday</h2>
-      <div class="visit-facts">
-        <div class="fact"><div class="ic">🕘</div><div><b>Sunday School — 9:00 AM</b><span>Classes for all ages</span></div></div>
-        <div class="fact"><div class="ic">🕙</div><div><b>Morning Worship — 10:15 AM</b><span>Singing, prayer, and a sermon from the Bible (about 75 min)</span></div></div>
-        <div class="fact"><div class="ic">📅</div><div><b>Wednesdays — 6:30 PM</b><span>Midweek service &amp; prayer meeting</span></div></div>
-        <div class="fact"><div class="ic">📍</div><div><b>Location to be announced</b><span>We're a new church plant — meeting location coming soon</span></div></div>
-      </div>
-      <a class="btn btn-primary" href="#">Let us know you're coming →</a>
+      <h4>Lincoln Highway Baptist Church</h4>
+      <p>Dalton, Ohio</p>
+      <p>Meeting place announced soon</p>
     </div>
-    <div class="expect">
-      <div class="item"><h4>What do I wear?</h4><p>Come comfortable. You'll see everything from slacks to jeans — no dress code.</p></div>
-      <div class="item"><h4>Will I stand out?</h4><p>No pressure and no spotlight. You're welcome to simply observe and take it in.</p></div>
-      <div class="item"><h4>What about my kids?</h4><p>Loving volunteers and a secure check-in. You'll always know your children are safe.</p></div>
-      <div class="item"><h4>What's the preaching like?</h4><p>We teach straight through books of the Bible — clear, practical, and Christ-centered.</p></div>
+    <div>
+      <h4>Gather</h4>
+      <p>Sunday School, 9:00 AM</p>
+      <p>Worship, 10:15 AM</p>
+      <p>Wednesday, 6:30 PM</p>
     </div>
-  </div>
-</section>
-
-<!-- ===== LATEST SERMON ===== -->
-<section class="band sermon" id="sermon">
-  <div class="wrap">
-    <div class="sec-head"><span class="kicker">From the Pulpit</span>
-      <h2>Sermons</h2>
-      <p>Messages will be posted here as they're recorded — check back soon.</p>
+    <div>
+      <h4>Write to us</h4>
+      <p><a href="mailto:office@lhbcohio.org">office@lhbcohio.org</a></p>
+      <p><a href="mailto:Ekramer@lhbcohio.org">Ekramer@lhbcohio.org</a></p>
     </div>
-    <div class="sermon-card">
-      <div class="photo" data-cap="Sermon recordings — coming soon"></div>
-      <div class="sermon-meta">
-        <span class="kicker">Coming soon</span>
-        <h3>Messages will be posted here</h3>
-        <p class="ref">As Lincoln Highway grows, we'll share recent sermons so you can listen any time.</p>
-        <p class="by">Check back soon.</p>
-      </div>
+    <div>
+      <h4>Sent from</h4>
+      <p>First Baptist Church of Jackson</p>
+      <p>Massillon, Ohio</p>
     </div>
   </div>
-</section>
-
-<!-- ===== BELIEFS ===== -->
-<section class="band alt belief-band" id="beliefs">
-  <div class="wrap">
-    <span class="kicker">What We Believe</span>
-    <p class="belief-statement" style="margin-top:14px">
-      We are an independent <span class="accent">Baptist</span> church holding to the historic
-      Christian faith — the authority of <span class="accent">Scripture</span>, salvation by
-      <span class="accent">grace</span> through faith in <span class="accent">Christ</span> alone,
-      and a life lived for His glory.</p>
-    <div class="creed">
-      <div class="c"><h4>The Scriptures</h4><p>The Bible is the inspired, inerrant Word of God — our only complete and final authority.</p></div>
-      <div class="c"><h4>The Godhead</h4><p>One true and eternal God in three persons: Father, Son, and Holy Spirit.</p></div>
-      <div class="c"><h4>Jesus Christ</h4><p>Virgin-born, sinless, crucified for our sins, bodily risen, and coming again.</p></div>
-      <div class="c"><h4>Salvation</h4><p>A free gift of God's grace through faith in Christ alone — and the believer is eternally secure.</p></div>
-      <div class="c"><h4>The Ordinances</h4><p>Believer's baptism by immersion and the Lord's Supper, kept as a memorial.</p></div>
-      <div class="c"><h4>His Return</h4><p>Christ will return personally and bodily to reign — our blessed hope.</p></div>
-    </div>
-    <p class="creed-note">We share the doctrine of our sending church, First Baptist Church of Jackson. A full Statement of Faith will be published here.</p>
-    <a class="btn btn-outline" href="#" style="margin-top:22px">Read our Statement of Faith</a>
+  <div class="colophon">
+    <span>© 2026 Lincoln Highway Baptist Church</span>
+    <span>An independent Baptist church, King James Bible</span>
   </div>
-</section>
-
-<!-- ===== NEXT STEPS ===== -->
-<section class="band" id="steps">
-  <div class="wrap">
-    <div class="sec-head center"><span class="kicker">Get Connected</span>
-      <h2>Your next step</h2>
-      <p>Church is meant to be lived together. Here's how to go deeper.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 110 8 4 4 0 010-8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <h3>Small Groups</h3>
-        <p>Mid-week gatherings in homes for Bible study, prayer, and friendship.</p>
-        <a href="#">Find a group <span>→</span></a>
-      </div>
-      <div class="step">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 3a4 4 0 100 8 4 4 0 000-8z"/></svg></div>
-        <h3>Kids &amp; Families</h3>
-        <p>Safe, age-appropriate classes with secure check-in for every child.</p>
-        <a href="#">Children's ministry <span>→</span></a>
-      </div>
-      <div class="step">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
-        <h3>New Here?</h3>
-        <p>Let us know you're coming and we'll have someone ready to welcome you.</p>
-        <a href="#">Plan a visit <span>→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="site" id="give">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-logo">
-        <b>Lincoln Highway Baptist Church</b>
-        <p>A gospel-centered Baptist church gathering each Sunday to worship Christ and grow as a family of faith.</p>
-        <div class="foot-map"></div>
-      </div>
-      <div>
-        <h4>Gather</h4>
-        <p>Sun 9:00 &amp; 10:15 AM · Wed 6:30 PM</p>
-        <a href="#visit">Plan a Visit</a>
-        <a href="#sermon">Sermons</a>
-        <a href="#beliefs">What We Believe</a>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <a href="#steps">Small Groups</a>
-        <a href="#steps">Kids &amp; Families</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Events</a>
-      </div>
-      <div>
-        <h4>Give</h4>
-        <p>Support the ministry of LHBC.</p>
-        <a class="btn btn-primary" href="#" style="margin-top:4px">Give Online</a>
-        <p style="margin-top:16px">Dalton, Ohio<br>Location to be announced</p>
-      </div>
-    </div>
-    <div class="copyright">
-      <span>© 2026 Lincoln Highway Baptist Church</span>
-      <span>Sundays · Worship 10:15 AM</span>
-    </div>
+  <div class="wordmark" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax meet">
+      <text x="600" y="106" text-anchor="middle" font-family="Sentient, ui-serif, Georgia, serif"
+            font-size="118" font-weight="700" letter-spacing="11" fill="#2f3564"
+            textLength="1150" lengthAdjust="spacingAndGlyphs">LINCOLN HIGHWAY</text>
+    </svg>
   </div>
 </footer>
 
-<script>
-  /* Mobile nav toggle */
-  (function(){var b=document.querySelector('.menu-btn'),n=document.querySelector('nav.main');
-    if(b&&n){b.onclick=function(){n.classList.toggle('open');};
-      n.querySelectorAll('a').forEach(function(a){a.onclick=function(){n.classList.remove('open');};});}})();
-</script>
+</div>
 
+<script>
+/* Marks the section you are reading in the nav. Purely additive emphasis on links that are already
+   visible and readable. Nothing on this page depends on script running. */
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var links = [].slice.call(document.querySelectorAll('.nav a')), map = {};
+  links.forEach(function(a){
+    var el = document.querySelector(a.getAttribute('href'));
+    if (el && el.id) map[el.id] = a;
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var a = map[e.target.id]; if(!a) return;
+      links.forEach(function(l){ l.removeAttribute('aria-current'); });
+      a.setAttribute('aria-current','true');
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+})();
+</script>
 </body>
 </html>
