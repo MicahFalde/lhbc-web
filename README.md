@@ -1,21 +1,11 @@
 # lincolnhighwaybaptist.org
 
-Deployed site for Lincoln Highway Baptist Church (Dalton, Ohio) — GitHub Pages, custom domain
-`lincolnhighwaybaptist.org` (`lhbcohio.org` redirects here).
+The public website for Lincoln Highway Baptist Church (Dalton, Ohio). GitHub Pages, custom domain
+`lincolnhighwaybaptist.org`; `lhbcohio.org` 301-redirects here and is the church's *email* domain.
 
-**This repo is a deploy target, not the source of truth.** Canonical sources live in
-`MicahFalde/LHBC` (`~/projects/LHBC`); edit there and copy across per the mapping in
-`docs/PROJECT-STATE.md`.
+**Deploy target, not source of truth.** Canonical source is `website/index.html` in
+`MicahFalde/LHBC` (`~/projects/LHBC`) — edit there and copy to `index.html` here.
 
-| Live path | Canonical source |
-|---|---|
-| `/` | `staging/index.html` |
-| `/website/` | `website/index.html` |
-| `/childrens-checkin/` | `childrens-checkin/index.html` |
-| `/pastor-dashboard/` | `pastor-dashboard/index.html` |
-| `/attendance-capture/` | `attendance-capture/index.html` |
-| `/annual-reporting/` | `annual-reporting/index.html` |
-| `/software-analysis/` | `software-analysis/index.html` |
-
-Everything here is a mockup with synthetic data behind a soft client-side password gate. No real
-member data — that requires real auth first.
+This site is **public and ungated**. The internal mockups (hub, children's check-in, pastor
+dashboard, attendance capture, annual reporting, software analysis) deliberately do **not** live
+here — they stay behind the password gate at `micahfalde.com/LHBC/`.
