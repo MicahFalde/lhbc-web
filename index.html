@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lincoln Highway Baptist Church · Software Previews</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --navy:#122a52; --navy-deep:#0d1f3d; --ink:#0f1b2d; --ink-soft:#51607a;
+    --line:#e4e9f1; --bg:#f5f7fb; --surface:#ffffff; --accent:#c8102e; --gold:#b3892f;
+    --ok:#2f7d52; --ok-bg:#e4f1ea; --radius:10px;
+    --head:'Merriweather',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);color:var(--ink);background:
+    radial-gradient(circle at 12% -5%, #e9eef8 0, transparent 42%),
+    radial-gradient(circle at 92% 110%, #eceef4 0, transparent 40%), var(--bg);min-height:100vh;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:54px 24px 72px}
+  h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+
+  .masthead{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+  .crest{width:54px;height:54px;flex-shrink:0}
+  .masthead h1{font-size:1.7rem;line-height:1.1}
+  .masthead .k{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .intro{color:var(--ink-soft);font-size:1.02rem;max-width:60ch;margin:14px 0 8px;line-height:1.6}
+  .note{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:7px 16px;font-size:.8rem;color:var(--ink-soft);margin-top:14px}
+  .note .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}}
+  .card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;transition:.16s;position:relative;min-height:172px}
+  a.card:hover{border-color:var(--navy);transform:translateY(-3px);box-shadow:0 18px 38px rgba(15,27,45,.09)}
+  .card.soon{opacity:.72}
+  .card .ic{width:46px;height:46px;border-radius:11px;background:#eef3fb;color:var(--navy);display:grid;place-items:center;margin-bottom:16px}
+  .card h3{font-size:1.2rem;margin-bottom:6px}
+  .card p{font-size:.9rem;color:var(--ink-soft);line-height:1.5;flex:1}
+  .badge{position:absolute;top:20px;right:20px;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+    padding:4px 10px;border-radius:999px}
+  .badge.live{background:var(--ok-bg);color:var(--ok)}
+  .badge.soon{background:#f0f1f4;color:var(--ink-soft)}
+  .go{margin-top:14px;font-size:.85rem;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px}
+  .card.soon .go{color:var(--ink-soft)}
+
+  footer{margin-top:40px;color:var(--ink-soft);font-size:.8rem;line-height:1.6}
+  footer code{background:#fff;border:1px solid var(--line);border-radius:4px;padding:1px 6px;font-size:.78rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <svg class="crest" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="44" height="44" rx="4" stroke="#b3892f" stroke-width="1.5" opacity=".7"/>
+      <path d="M24 8v10M19 13h10" stroke="#b3892f" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M13 40V24l11-9 11 9v16" stroke="#122a52" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M20 40v-8h8v8" stroke="#122a52" stroke-width="1.8"/>
+    </svg>
+    <div>
+      <div class="k">Lincoln Highway Baptist Church</div>
+      <h1>Software Previews</h1>
+    </div>
+  </div>
+  <p class="intro">A private workspace for the church-software mockups we're building. Each one is an
+    interactive draft with placeholder/synthetic data — nothing here is connected to live church data yet.
+    Pick a project to take a look.</p>
+  <span class="note"><span class="dot"></span> Private preview · synthetic data only · drafts in progress</span>
+
+  <div class="grid">
+    <a class="card" href="/website/">
+      <span class="badge live">Live</span>
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 4v5"/></svg></div>
+      <h3>Church Website</h3>
+      <p>The public site — who we are, what we believe, plan a visit, sermons, give.</p>
+      <span class="go">Open preview →</span>
+    </a>
+
+    <a class="card" href="/childrens-checkin/">
+      <span class="badge live">Live</span>
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 11a3 3 0 100-6 3 3 0 000 6zM3 20a6 6 0 0112 0M16 8l2 2 4-4"/></svg></div>
+      <h3>Children's Check-In</h3>
+      <p>iPad kiosk — check kids into nursery &amp; Sunday school, print tags with secure pickup codes, keep attendance.</p>
+      <span class="go">Open preview →</span>
+    </a>
+
+    <a class="card" href="/pastor-dashboard/">
+      <span class="badge live">Live</span>
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3v18h18M7 14l4-4 3 3 5-6"/></svg></div>
+      <h3>Pastor's Dashboard</h3>
+      <p>Daily command center — attendance, giving, guests, baptisms, follow-ups — with Today / Weekly / Monthly / Annual views.</p>
+      <span class="go">Open preview →</span>
+    </a>
+
+    <a class="card" href="/attendance-capture/">
+      <span class="badge live">Live</span>
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h16v4H4zM4 12h16M4 18h16M8 12v6M14 4v4"/></svg></div>
+      <h3>Attendance Capture</h3>
+      <p>Smart pew roster — check a box, scan the stack, read the marks. Handwriting only for guests, with a confidence-routed review queue that learns.</p>
+      <span class="go">Open preview →</span>
+    </a>
+
+    <a class="card" href="/annual-reporting/">
+      <span class="badge live">Live</span>
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9zM14 3v6h6M9 13h6M9 17h6"/></svg></div>
+      <h3>Annual Reporting</h3>
+      <p>One click turns a year of data into a finished, printable report for the members — attendance, giving, baptisms, growth. No manual spreadsheets.</p>
+      <span class="go">Open preview →</span>
+    </a>
+
+    <a class="card" href="/software-analysis/">
+      <span class="badge live" style="background:#122a52;color:#fff">Analysis</span>
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg></div>
+      <h3>Software Analysis</h3>
+      <p>Compare ChMS, worship &amp; licensing options — requirements + an interactive cost estimator. A working decision doc to review together.</p>
+      <span class="go">Open analysis →</span>
+    </a>
+  </div>
+
+  <footer>
+    Lincoln Highway Baptist Church · independent Baptist church plant, Dalton, Ohio.<br>
+    Hosted at <code>lincolnhighwaybaptist.org</code> · password-protected preview · built with Claude Code.
+  </footer>
+</div>
+
+<script>
+  /* Soft private-preview gate (shared session unlock across /*). */
+  (function(){
+    var PASS="lincolnhwy";
+    if(sessionStorage.getItem("lhbc_ok")==="1") return;
+    var ov=document.createElement("div");
+    ov.style.cssText="position:fixed;inset:0;z-index:9999;background:#122a52;color:#fff;display:grid;place-items:center;font-family:'Inter',system-ui,sans-serif";
+    ov.innerHTML='<form style="text-align:center;width:320px;max-width:88vw;padding:24px">'
+      +'<div style="font:700 1.5rem Merriweather,Georgia,serif;margin-bottom:6px">Lincoln Highway Baptist Church</div>'
+      +'<div style="opacity:.8;font-size:.9rem;margin-bottom:22px">Private preview &middot; please enter the password</div>'
+      +'<input type="password" placeholder="Password" autofocus style="width:100%;padding:12px 14px;border:none;border-radius:5px;font-size:1rem;margin-bottom:10px">'
+      +'<button style="width:100%;padding:12px;border:none;border-radius:5px;background:#c8102e;color:#fff;font:600 1rem Inter,sans-serif;cursor:pointer">Enter</button>'
+      +'<div class="err" style="color:#f3b8b8;font-size:.82rem;height:18px;margin-top:8px"></div></form>';
+    document.documentElement.appendChild(ov);
+    var f=ov.querySelector("form"),inp=ov.querySelector("input"),err=ov.querySelector(".err");
+    f.onsubmit=function(e){e.preventDefault();
+      if(inp.value===PASS){sessionStorage.setItem("lhbc_ok","1");ov.remove();}
+      else{err.textContent="Incorrect password.";inp.value="";inp.focus();}
+    };
+  })();
+</script>
+</body>
+</html>
