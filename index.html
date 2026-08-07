@@ -95,16 +95,20 @@ body::before{
    Deliberately not the eyebrow/headline/subline/two-buttons preset. The scripture is the largest
    type on the page and the marketing sentence sits under it, subordinate. One action, not a pair. */
 .hero{position:relative;background:var(--navy);color:var(--cream)}
-.scene{display:block;width:100%;height:clamp(230px,34vw,410px)}
-.hero-copy{position:relative;max-width:1180px;margin:0 auto;padding:clamp(40px,5.4vw,72px) var(--gut) clamp(44px,6vw,76px)}
+.scene{display:block;width:100%;height:auto}
+.hero-copy{position:relative;max-width:1180px;margin:0 auto;padding:clamp(32px,4vw,52px) var(--gut) clamp(34px,4.5vw,54px)}
 .scripture{font-family:var(--display);font-style:italic;font-weight:400;
-  font-size:clamp(1.65rem,1.1rem + 2.6vw,3.4rem);line-height:1.22;color:var(--gold);
-  margin:0;max-width:26ch;letter-spacing:-.004em}
+  font-size:clamp(1.45rem,1.05rem + 1.9vw,2.6rem);line-height:1.24;color:var(--gold);
+  margin:0;max-width:28ch;letter-spacing:-.004em}
 .ref{margin:16px 0 0;font-size:.92rem;color:var(--muted-on-navy)}
-h1{font-size:clamp(1.3rem,1.12rem + .8vw,1.75rem);font-weight:700;max-width:26ch;
-  margin:clamp(30px,4vw,46px) 0 0;color:var(--cream)}
+h1{font-size:clamp(1.22rem,1.08rem + .65vw,1.55rem);font-weight:700;max-width:28ch;
+  margin:clamp(22px,2.8vw,32px) 0 0;color:var(--cream)}
 .hero-sub{margin:14px 0 0;max-width:48ch;color:#cdd2ec}
-.hero-act{margin-top:30px}
+.hero-act{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 30px}
+/* service times sit in the first screen: the single most-wanted fact on a church site */
+.hero-times{display:flex;flex-wrap:wrap;gap:4px 22px;margin:20px 0 0;padding:0;list-style:none;
+  color:#cdd2ec;font-size:.96rem}
+.hero-times b{color:var(--cream);font-weight:600}
 .act{display:inline-flex;align-items:center;gap:11px;background:var(--oxblood);color:#fdf9f1;
   text-decoration:none;font-weight:600;font-size:1rem;padding:15px 24px;border-radius:10px;
   box-shadow:inset 0 0 0 1px var(--oxblood-lift);transition:background .18s ease}
@@ -199,10 +203,11 @@ h1{font-size:clamp(1.3rem,1.12rem + .8vw,1.75rem);font-weight:700;max-width:26ch
         <rect width="33" height="41" rx="4" fill="#f3eee0"/>
         <path d="M0 4a4 4 0 0 1 4-4h25a4 4 0 0 1 4 4v2.5H0Z" fill="#7d1f2c"/>
         <path d="M0 34.5h33V37a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4Z" fill="#252a55"/>
-        <g fill="#252a55" transform="translate(1.45,3.3)">
-          <rect x="12.5" y="7.3" width="3.1" height="19.8"/>
-          <rect x="8.8" y="13.5" width="10.4" height="3.1"/>
-          <rect x="12.5" y="24" width="8.8" height="3.1"/>
+        <g fill="#252a55" transform="translate(1.2,1.8)">
+          <rect x="13.4" y="12.3" width="3.1" height="17.5"/>
+          <rect x="13.4" y="26.7" width="10.3" height="3.1"/>
+          <rect x="8.8" y="7.7" width="3.1" height="16"/>
+          <rect x="5.2" y="13.4" width="10.3" height="3.1"/>
         </g>
       </svg>
       <span><b>Lincoln Highway</b><i>Baptist Church</i></span>
@@ -221,7 +226,7 @@ h1{font-size:clamp(1.3rem,1.12rem + .8vw,1.75rem);font-weight:700;max-width:26ch
 
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <svg class="scene" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" role="img"
+  <svg class="scene" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMid meet" role="img"
        aria-label="A road running out through Ohio farmland at dusk, with the church's roadside sign standing on the shoulder.">
     <defs>
       <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
@@ -231,65 +236,56 @@ h1{font-size:clamp(1.3rem,1.12rem + .8vw,1.75rem);font-weight:700;max-width:26ch
       <linearGradient id="tarmac" x1="0" y1="1" x2="0" y2="0">
         <stop offset="0" stop-color="#565b8c"/><stop offset="1" stop-color="#2c3160"/>
       </linearGradient>
-      <clipPath id="frame"><rect width="1440" height="420"/></clipPath>
     </defs>
-    <g clip-path="url(#frame)">
-      <rect width="1440" height="420" fill="url(#sky)"/>
+    <rect width="1440" height="300" fill="url(#sky)"/>
 
-      <!-- one low sun on the horizon: a single disc, no halo rings behind it -->
-      <circle cx="1104" cy="299" r="34" fill="#e6c891"/>
+    <circle cx="1104" cy="196" r="30" fill="#e6c891"/>
 
-      <!-- far treeline, sitting on the horizon -->
-      <path d="M0 300q62-16 112-3 54-19 108-4 48-21 100-6 60-17 116 0 56-19 112-2 62-15 120 2
-               58-15 114 2 54-13 110 0 60-11 118 4 58-13 116 0 62-9 122 6 54-11 114 2v122H0Z"
-            fill="#1c2043"/>
+    <path d="M0 198q62-13 112-2 54-15 108-3 48-17 100-5 60-14 116 0 56-15 112-2 62-12 120 2
+             58-12 114 2 54-10 110 0 60-9 118 3 58-11 116 0 62-7 122 5 54-9 114 2v102H0Z"
+          fill="#1c2043"/>
 
-      <!-- fields: solid warm bands so they read as lit ground, not a wash over the sky -->
-      <path d="M0 303h1440v19H0Z" fill="#6b6550"/>
-      <path d="M0 322h1440v28H0Z" fill="#877b5f"/>
-      <path d="M0 350h1440v34H0Z" fill="#a4966f"/>
-      <path d="M0 384h1440v36H0Z" fill="#c0b184"/>
-      <g stroke="#5f5945" stroke-width="1.5" opacity=".5">
-        <path d="M120 420 520 306"/><path d="M300 420 600 306"/><path d="M-60 420 440 306"/>
-        <path d="M1320 420 940 306"/><path d="M1140 420 880 306"/><path d="M1500 420 1010 306"/>
-      </g>
+    <path d="M0 200h1440v16H0Z" fill="#6b6550"/>
+    <path d="M0 216h1440v22H0Z" fill="#877b5f"/>
+    <path d="M0 238h1440v28H0Z" fill="#a4966f"/>
+    <path d="M0 266h1440v34H0Z" fill="#c0b184"/>
+    <g stroke="#5f5945" stroke-width="1.5" opacity=".5">
+      <path d="M120 300 520 203"/><path d="M300 300 600 203"/><path d="M-60 300 440 203"/>
+      <path d="M1320 300 940 203"/><path d="M1140 300 880 203"/><path d="M1500 300 1010 203"/>
+    </g>
 
-      <!-- the road, with centre line dashes narrowing into the distance -->
-      <path d="M690 303h68l264 117H392Z" fill="url(#tarmac)"/>
-      <g fill="#e6dcc0" opacity=".8">
-        <path d="M719 306h5l7 15h-8Z"/>
-        <path d="M732 332h8l12 23h-13Z"/>
-        <path d="M755 368h13l19 34h-20Z"/>
-      </g>
+    <path d="M690 201h68l264 99H392Z" fill="url(#tarmac)"/>
+    <g fill="#e6dcc0" opacity=".8">
+      <path d="M719 204h5l6 13h-7Z"/>
+      <path d="M731 226h8l11 20h-12Z"/>
+      <path d="M753 256h13l17 30h-19Z"/>
+    </g>
 
-      <!-- a barn and silo, because this is farm country and specifics beat abstraction -->
-      <g transform="translate(168 244)">
-        <path d="M0 22 34 0l34 22v37H0Z" fill="#5e2029"/>
-        <path d="M0 22 34 0l34 22-34 8Z" fill="#7d1f2c"/>
-        <rect x="27" y="40" width="15" height="19" fill="#2a2e56"/>
-        <path d="M74 20a8 8 0 0 1 16 0v39H74Z" fill="#4a4f7d"/>
-      </g>
+    <g transform="translate(168 152)">
+      <path d="M0 20 30 0l30 20v28H0Z" fill="#5e2029"/>
+      <path d="M0 20 30 0l30 20-30 7Z" fill="#7d1f2c"/>
+      <rect x="24" y="34" width="13" height="14" fill="#2a2e56"/>
+      <path d="M65 18a7 7 0 0 1 14 0v30H65Z" fill="#4a4f7d"/>
+    </g>
 
-      <!-- fence line receding along the shoulder -->
-      <g fill="#4a4470">
-        <rect x="1206" y="292" width="5" height="26"/><rect x="1116" y="296" width="4" height="21"/>
-        <rect x="1046" y="299" width="3.4" height="17"/><rect x="992" y="301" width="3" height="14"/>
-        <rect x="950" y="302" width="2.6" height="12"/>
-        <path d="M950 305h262v3.4H950Z" opacity=".75"/>
-      </g>
+    <g fill="#4a4470">
+      <rect x="1206" y="190" width="5" height="22"/><rect x="1116" y="193" width="4" height="18"/>
+      <rect x="1046" y="196" width="3.4" height="14"/><rect x="992" y="197" width="3" height="12"/>
+      <rect x="950" y="198" width="2.6" height="10"/>
+      <path d="M950 201h262v3H950Z" opacity=".75"/>
+    </g>
 
-      <!-- the church's own sign, standing on the shoulder; monogram centred in its field -->
-      <g transform="translate(436 160)">
-        <rect x="53" y="150" width="14" height="104" fill="#262a52"/>
-        <rect width="120" height="156" rx="9" fill="#f3eee0"/>
-        <path d="M0 9a9 9 0 0 1 9-9h102a9 9 0 0 1 9 9v19H0Z" fill="#7d1f2c"/>
-        <path d="M0 128h120v19a9 9 0 0 1-9 9H9a9 9 0 0 1-9-9Z" fill="#252a55"/>
-        <!-- one upright serving as both the cross and the L; the foot turns right at the base -->
-        <g fill="#252a55" transform="translate(2,11)">
-          <rect x="48" y="28" width="12" height="76"/>
-          <rect x="34" y="52" width="40" height="12"/>
-          <rect x="48" y="92" width="34" height="12"/>
-        </g>
+    <!-- the church's own sign, fully inside the frame: nothing is cropped at any width -->
+    <g transform="translate(452 30)">
+      <rect x="47" y="132" width="12" height="88" fill="#262a52"/>
+      <rect width="106" height="136" rx="8" fill="#f3eee0"/>
+      <path d="M0 8a8 8 0 0 1 8-8h90a8 8 0 0 1 8 8v17H0Z" fill="#7d1f2c"/>
+      <path d="M0 112h106v16a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8Z" fill="#252a55"/>
+      <g fill="#252a55" transform="translate(1,5)">
+        <rect x="46" y="35" width="10" height="60"/>
+        <rect x="46" y="85" width="35" height="10"/>
+        <rect x="30" y="19" width="10" height="55"/>
+        <rect x="18" y="39" width="35" height="10"/>
       </g>
     </g>
   </svg>
@@ -301,6 +297,11 @@ h1{font-size:clamp(1.3rem,1.12rem + .8vw,1.75rem);font-weight:700;max-width:26ch
     <p class="hero-sub">We take our name from the first road built across America, which still runs
       through this town, and from the older Way it points to. Independent Baptist, plainly preached,
       families welcome.</p>
+    <ul class="hero-times">
+      <li><b>Sunday 9:00</b> Sunday School</li>
+      <li><b>Sunday 10:15</b> Worship</li>
+      <li><b>Wednesday 6:30</b> Bible study</li>
+    </ul>
     <div class="hero-act">
       <a class="act" href="#visit">Plan your first visit
         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor"
