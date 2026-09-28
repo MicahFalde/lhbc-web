@@ -221,6 +221,20 @@ h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 .episodes .m{font-size:.9rem;color:var(--ink-soft);white-space:nowrap}
 @media (max-width:640px){.episodes a{grid-template-columns:60px 1fr}.episodes .m{display:none}}
 
+/* what we believe: long reference text, set to read */
+.jump{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px}
+.jump a{font-weight:600;font-size:.95rem;color:var(--revival);text-decoration:none;border-bottom:1.5px solid rgba(199,38,29,.35)}
+.jump a:hover{border-color:var(--revival)}
+.articles{max-width:72ch}
+.articles h3{margin-top:clamp(36px,5vw,56px);margin-bottom:12px;color:var(--revival)}
+.articles h3:first-child{margin-top:0}
+.articles p{margin-top:.9em}
+.articles h3+p{margin-top:0}
+.articles .defs{margin:.9em 0 0 0;padding-left:1.2em;list-style:disc}
+.articles .defs li{margin-top:.5em;color:var(--ink-soft)}
+.articles .refs{margin-top:.9em;font-size:.88rem;line-height:1.55;color:var(--dusty);letter-spacing:.005em}
+.statement .head{margin-bottom:clamp(24px,3vw,40px)}
+
 /* study sheets */
 .study{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,3vw,40px);align-items:start}
 .sheets{border-top:1.5px solid var(--foundry)}
