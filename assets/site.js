@@ -48,3 +48,21 @@
       }
     }).catch(function () {});
 })();
+
+// AIDEV-NOTE: GitHub Pages caches HTML for ten minutes, so a visitor can refresh and still get the
+// previous build. Each build writes /version.json; if it differs from the stamp baked into this page,
+// reload once (reload() revalidates the document with the server). Guarded per session so a slow CDN
+// cannot loop it, and skipped entirely when the request fails.
+(function () {
+  var meta = document.querySelector('meta[name="build"]'); if (!meta) return;
+  var mine = meta.getAttribute('content'), KEY = 'lhbc_reloaded_for';
+  fetch('/version.json?_=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (!d.v || d.v === mine) return;
+      var done = null; try { done = sessionStorage.getItem(KEY); } catch (e) {}
+      if (done === d.v) return;
+      try { sessionStorage.setItem(KEY, d.v); } catch (e) {}
+      location.reload();
+    }).catch(function () {});
+})();
