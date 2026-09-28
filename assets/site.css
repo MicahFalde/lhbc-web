@@ -178,7 +178,7 @@ h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 @media (max-width:760px){.creed{grid-template-columns:1fr}.creed li:nth-child(2){border-top:1px solid var(--cream-line)}}
 
 /* pastor */
-.pastor{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,5vw,72px);align-items:start}
+.pastor{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
 .pastor figure{margin:0}
 .pastor img{width:100%;aspect-ratio:4/5;object-fit:cover}
 .pastor figcaption{margin-top:10px;font-size:.9rem;color:var(--ink-soft)}
