@@ -183,10 +183,8 @@ h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 @media (max-width:760px){.pastor{grid-template-columns:1fr}.pastor img{max-width:420px}}
 
 /* visit */
-.faq{counter-reset:q}
-.faq li{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:20px 0;border-top:1px solid var(--cream-line)}
+.faq li{padding:20px 0;border-top:1px solid var(--cream-line)}
 .faq li:first-child{border-top:1.5px solid var(--foundry)}
-.faq li::before{counter-increment:q;content:"0" counter(q);font-family:var(--display);font-weight:700;color:var(--revival);font-size:1.15rem;line-height:1.5}
 .faq b{display:block;font-weight:600;font-size:1.08rem;color:var(--foundry);margin-bottom:4px}
 .faq p{max-width:52ch}
 .hours{background:var(--foundry);color:var(--cream);padding:clamp(26px,3vw,40px)}
