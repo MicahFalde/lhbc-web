@@ -1,0 +1,245 @@
+/* Lincoln Highway Baptist Church — site styles.
+   Brand Guideline v1.0 (tommy design, 2026): Foundry navy, Revival red, Sunday Linen, Dusty Mile,
+   on the guide's cream page ground. Karol (headings) + Americane (sans) are the brand faces; until
+   the church's Adobe Fonts embed arrives, Erode + Switzer (Fontshare) stand in. Swapping = the
+   @import below and the two font tokens. */
+@import url("https://api.fontshare.com/v2/css?f[]=erode@600,700&f[]=switzer@400,500,600,700&display=swap");
+
+:root{
+  --foundry:#1E3250; --foundry-deep:#172742; --revival:#C7261D; --revival-deep:#A81E17;
+  --linen:#FFFFFF; --dusty:#8D999B; --cream:#F9F7EC; --cream-deep:#EEEADA; --cream-line:#D9D3BC;
+  --ink:#1E3250; --ink-soft:#4C5A73; --on-navy-soft:#B9C2D2; --on-red-soft:rgba(255,255,255,.82);
+  --display:'Erode',ui-serif,Georgia,'Times New Roman',serif;
+  --sans:'Switzer',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --gut:clamp(20px,5vw,72px); --max:1180px;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='.55'/></svg>");
+}
+*{box-sizing:border-box}
+html{background:var(--cream);scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:400;
+  font-size:clamp(1rem,.95rem + .25vw,1.125rem);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;letter-spacing:-.005em;color:var(--foundry);text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+ul,ol{margin:0;padding:0;list-style:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.shell{max-width:var(--max);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+/* Kerri: "no flat navy panel". Every navy and red surface carries a fine grain instead. */
+.grain{position:relative;isolation:isolate}
+.grain::before{content:"";position:absolute;inset:0;background:var(--grain);opacity:.16;mix-blend-mode:soft-light;pointer-events:none;z-index:0}
+.grain>*{position:relative;z-index:1}
+:focus-visible{outline:2px solid var(--revival);outline-offset:3px}
+
+/* ---------- header: one logo, small, top left; tabs in line (Cam, 2026-09-09) ---------- */
+.top{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:1.5px solid var(--foundry)}
+.top-in{max-width:var(--max);margin:0 auto;padding:0 var(--gut);min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.mark{display:block;flex:none;padding:14px 0}
+.mark img{width:clamp(200px,24vw,262px);height:auto}
+.nav{display:flex;align-items:center;gap:clamp(16px,2.4vw,34px)}
+.nav a{text-decoration:none;font-weight:500;font-size:.98rem;color:var(--ink-soft);transition:color .2s;white-space:nowrap}
+.nav a:hover{color:var(--revival)}
+.nav a[aria-current="page"]{color:var(--foundry);font-weight:600}
+.nav .give{border:1.5px solid var(--foundry);color:var(--foundry);font-weight:600;padding:7px 18px;border-radius:3px;transition:background .2s,color .2s}
+.nav .give:hover{background:var(--foundry);color:var(--cream)}
+.menu{display:none;appearance:none;background:none;border:1.5px solid var(--foundry);border-radius:3px;color:var(--foundry);padding:8px 10px;cursor:pointer;align-items:center;gap:8px;font:600 .9rem var(--sans)}
+.menu svg{width:20px;height:16px;display:block}
+.menu .bar{transition:transform .25s ease,opacity .2s}
+.menu[aria-expanded="true"] .b1{transform:translateY(7px) rotate(45deg)}
+.menu[aria-expanded="true"] .b2{opacity:0}
+.menu[aria-expanded="true"] .b3{transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:760px){
+  .top-in{min-height:64px;gap:12px}
+  .mark img{width:min(58vw,220px)}
+  .menu{display:inline-flex}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--cream);border-bottom:1.5px solid var(--foundry);flex-direction:column;align-items:stretch;gap:0;padding:6px var(--gut) 18px}
+  .nav.open{display:flex}
+  .nav a{padding:13px 0;border-top:1px solid var(--cream-line);font-size:1.05rem}
+  .nav a:first-child{border-top:0}
+  .nav .give{margin-top:12px;text-align:center;padding:12px 18px;border-top:1.5px solid var(--foundry)}
+}
+
+/* ---------- buttons and links ---------- */
+.btn{display:inline-block;background:var(--revival);color:var(--cream);font-weight:600;font-size:1rem;padding:13px 26px;border-radius:3px;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--revival-deep)}
+.btn.navy{background:var(--foundry)}
+.btn.navy:hover{background:var(--foundry-deep)}
+.btn.line{background:none;border:1.5px solid currentColor;color:var(--foundry);padding:11px 24px}
+.btn.line:hover{background:var(--foundry);color:var(--cream)}
+.on-navy .btn.line,.on-red .btn.line{color:var(--cream)}
+.on-navy .btn.line:hover{background:var(--cream);color:var(--foundry)}
+.on-red .btn.line:hover{background:var(--cream);color:var(--revival)}
+.text-link{color:var(--revival);font-weight:600;text-decoration:none;border-bottom:1.5px solid rgba(199,38,29,.35);transition:border-color .2s}
+.text-link:hover{border-color:var(--revival)}
+.on-navy .text-link{color:var(--cream);border-color:rgba(249,247,236,.4)}
+.on-navy .text-link:hover{border-color:var(--cream)}
+
+/* ---------- home: arrival (no photograph for launch, per Micah 2026-09-28) ---------- */
+.arrive{padding:clamp(48px,8vw,112px) 0 clamp(48px,8vw,112px)}
+.arrive-in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center}
+@media (max-width:860px){.arrive-in{grid-template-columns:1fr;gap:36px}}
+.arrive .where{font-family:var(--display);font-weight:700;color:var(--revival);font-size:clamp(1.25rem,1rem + 1.2vw,1.9rem);letter-spacing:.02em}
+.arrive h1{font-size:clamp(2.6rem,1.4rem + 5vw,5.8rem);line-height:.98;margin-top:10px;max-width:12ch}
+.arrive .place{margin-top:clamp(20px,3vw,32px);font-size:clamp(1.05rem,1rem + .4vw,1.3rem);color:var(--ink-soft);max-width:44ch;line-height:1.5}
+.arrive .place b{color:var(--foundry);font-weight:600}
+.arrive .btn{margin-top:clamp(24px,3vw,36px)}
+
+/* the marker strip: navy, hours on one line */
+.strip{background:var(--foundry);color:var(--cream)}
+.strip ul{padding:14px var(--gut);max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:8px clamp(18px,3vw,44px);font-weight:600;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+.strip li b{font-weight:700;color:#fff}
+.strip li span{opacity:.85}
+@media (max-width:640px){.strip ul{font-size:.74rem;gap:6px 16px}}
+
+/* ---------- home: This Week (Kerri) and Coming up (Ed), Greentown's pattern in brand ---------- */
+.week{padding:clamp(36px,5vw,64px) 0 0}
+.week .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{padding:clamp(22px,2.6vw,32px) clamp(20px,2.4vw,28px);min-height:230px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;text-decoration:none}
+.card small{display:block;font-weight:600;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.card b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,1.1rem + .7vw,1.6rem);line-height:1.15}
+.card span{display:block;font-size:.98rem;margin-top:8px;line-height:1.5}
+.card .go{font-weight:600;font-size:.94rem;border:1.5px solid currentColor;border-radius:3px;padding:8px 16px;align-self:flex-start;transition:background .2s,color .2s}
+.card.navy{background:var(--foundry);color:var(--cream)}
+.card.navy small,.card.navy span{color:var(--on-navy-soft)}
+.card.navy:hover .go{background:var(--cream);color:var(--foundry)}
+.card.red{background:var(--revival);color:var(--cream)}
+.card.red small,.card.red span{color:var(--on-red-soft)}
+.card.red:hover .go{background:var(--cream);color:var(--revival)}
+.card.cream{background:var(--cream);color:var(--foundry);border:1.5px solid var(--foundry)}
+.card.cream small{color:var(--revival)}
+.card.cream span{color:var(--ink-soft)}
+.card.cream:hover .go{background:var(--foundry);color:var(--cream)}
+@media (max-width:760px){.week .row{grid-template-columns:1fr}.card{min-height:0}}
+.coming{padding:clamp(40px,6vw,80px) 0 clamp(48px,7vw,96px)}
+.coming h2{font-size:clamp(1.6rem,1.3rem + 1.4vw,2.4rem);margin-bottom:18px}
+.coming ol{border-top:1.5px solid var(--foundry)}
+.coming li{display:grid;grid-template-columns:104px 1fr auto;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid var(--cream-line)}
+.coming .d{font-family:var(--display);font-weight:700;color:var(--revival);line-height:1.05;font-size:1.1rem}
+.coming .d small{display:block;font-family:var(--sans);font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+.coming .t b{display:block;font-weight:600;color:var(--foundry);font-size:1.08rem}
+.coming .t span{color:var(--ink-soft);font-size:.98rem}
+.coming .lk{font-weight:600;color:var(--foundry);font-size:.92rem;border:1.5px solid var(--foundry);border-radius:3px;padding:8px 16px;white-space:nowrap;text-decoration:none;transition:background .2s,color .2s}
+.coming .lk:hover{background:var(--foundry);color:var(--cream)}
+.coming .all{display:inline-block;margin-top:20px}
+@media (max-width:640px){.coming li{grid-template-columns:82px 1fr}.coming .lk{display:none}}
+
+/* ---------- page heads and sections ---------- */
+.page-head{padding:clamp(48px,8vw,104px) 0 clamp(28px,4vw,52px)}
+.page-head h1{font-size:clamp(2.3rem,1.5rem + 3.6vw,4.6rem);max-width:16ch}
+.page-head .lede{margin-top:18px;font-weight:500;font-size:clamp(1.1rem,1rem + .5vw,1.4rem);line-height:1.4;color:var(--ink-soft);max-width:48ch}
+.sec{padding:clamp(48px,7vw,96px) 0}
+.sec.tight{padding-top:0}
+.sec.deep{background:var(--cream-deep)}
+.head{display:flex;align-items:baseline;gap:18px;border-bottom:1.5px solid var(--foundry);padding-bottom:14px;margin-bottom:clamp(28px,4vw,52px)}
+.head .no{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--revival)}
+.head .lbl{font-weight:500;font-size:.98rem;color:var(--ink-soft)}
+h2{font-size:clamp(1.9rem,1.4rem + 2.2vw,3.2rem)}
+h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
+.lede{font-weight:500;font-size:clamp(1.1rem,1rem + .5vw,1.4rem);line-height:1.4;color:var(--foundry)}
+.prose p{max-width:60ch}
+.prose p+p{margin-top:1em}
+.two{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
+.two.rev{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+@media (max-width:860px){.two,.two.rev{grid-template-columns:1fr}}
+
+/* stacked statements (mission, vision, sent) */
+.mv>div{padding:clamp(22px,3vw,36px) 0}
+.mv>div:first-child{padding-top:0}
+.mv>div+div{border-top:1.5px solid var(--foundry)}
+.mv h3{margin-bottom:10px}
+.mv p{max-width:56ch}
+
+/* the red "Go" panel */
+.go-panel{background:var(--revival);color:var(--cream)}
+.go-panel .shell{padding-top:clamp(52px,7vw,96px);padding-bottom:clamp(52px,7vw,96px);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,72px);align-items:start}
+.go-panel h2{color:var(--cream)}
+.go-panel .verse{font-family:var(--display);font-weight:600;font-size:clamp(1.45rem,1.1rem + 1.7vw,2.5rem);line-height:1.22;text-wrap:pretty}
+.go-panel .verse em{font-style:normal;color:#fff;font-weight:700}
+.go-panel .ref{margin-top:18px;font-weight:500;font-size:.95rem;color:var(--on-red-soft);max-width:56ch}
+@media (max-width:860px){.go-panel .shell{grid-template-columns:1fr}}
+
+/* beliefs */
+.creed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(28px,5vw,72px)}
+.creed li{padding:22px 0;border-top:1px solid var(--cream-line)}
+.creed li:nth-child(-n+2){border-top:1.5px solid var(--foundry)}
+.creed b{display:block;font-family:var(--display);font-weight:700;font-size:1.28rem;color:var(--revival);margin-bottom:6px}
+.creed span{display:block;max-width:48ch}
+@media (max-width:760px){.creed{grid-template-columns:1fr}.creed li:nth-child(2){border-top:1px solid var(--cream-line)}}
+
+/* pastor */
+.pastor{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,5vw,72px);align-items:start}
+.pastor figure{margin:0}
+.pastor img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%}
+.pastor figcaption{margin-top:10px;font-size:.9rem;color:var(--ink-soft)}
+.pastor .prose p{max-width:58ch}
+.pastor .role{font-weight:600;color:var(--revival);margin:6px 0 18px}
+@media (max-width:760px){.pastor{grid-template-columns:1fr}.pastor img{max-width:420px}}
+
+/* visit */
+.faq{counter-reset:q}
+.faq li{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:20px 0;border-top:1px solid var(--cream-line)}
+.faq li:first-child{border-top:1.5px solid var(--foundry)}
+.faq li::before{counter-increment:q;content:"0" counter(q);font-family:var(--display);font-weight:700;color:var(--revival);font-size:1.15rem;line-height:1.5}
+.faq b{display:block;font-weight:600;font-size:1.08rem;color:var(--foundry);margin-bottom:4px}
+.faq p{max-width:52ch}
+.hours{background:var(--foundry);color:var(--cream);padding:clamp(26px,3vw,40px)}
+.hours h3{color:var(--cream);margin-bottom:18px}
+.hours dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;align-items:baseline}
+.hours dt{font-family:var(--display);font-weight:700;font-size:1.3rem;white-space:nowrap}
+.hours dd{margin:0;color:var(--on-navy-soft)}
+.hours dd b{color:var(--cream);font-weight:600}
+.hours .addr{margin-top:22px;padding-top:18px;border-top:1px solid rgba(249,247,236,.35);font-style:normal;line-height:1.55}
+.hours .addr b{display:block;color:var(--cream);font-weight:600}
+.hours .addr span{color:var(--on-navy-soft)}
+.hours .btn{margin-top:20px}
+
+/* sermons */
+.embed{border:1.5px solid var(--foundry);background:var(--cream-deep)}
+.embed iframe{display:block;width:100%;height:352px;border:0}
+.listen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.listen a{display:block;padding:22px 22px 24px;border:1.5px solid var(--foundry);text-decoration:none;color:var(--foundry);transition:background .2s,color .2s}
+.listen a:hover{background:var(--foundry);color:var(--cream)}
+.listen a small{display:block;font-weight:600;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--revival);margin-bottom:8px}
+.listen a:hover small{color:var(--on-navy-soft)}
+.listen a b{display:block;font-family:var(--display);font-weight:700;font-size:1.3rem}
+.listen a span{display:block;font-size:.95rem;margin-top:6px;opacity:.85}
+@media (max-width:760px){.listen{grid-template-columns:1fr}}
+
+/* give and contact */
+.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
+.ways>div{border-top:1.5px solid var(--foundry);padding-top:18px}
+.ways h3{font-size:1.4rem;margin-bottom:8px}
+.ways p{max-width:36ch}
+.ways .btn,.ways .text-link{margin-top:16px}
+.ways .text-link{display:inline-block}
+@media (max-width:760px){.ways{grid-template-columns:1fr}}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
+.contact-grid>div{border-top:1.5px solid var(--foundry);padding-top:18px}
+.contact-grid h3{font-size:1.4rem;margin-bottom:8px}
+.contact-grid p{max-width:40ch}
+.contact-grid address{font-style:normal;line-height:1.6}
+.contact-grid .big{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,1.1rem + .9vw,1.8rem);color:var(--revival);text-decoration:none;display:inline-block;margin:6px 0 10px;word-break:break-all}
+.contact-grid .big:hover{color:var(--revival-deep)}
+@media (max-width:760px){.contact-grid{grid-template-columns:1fr}}
+
+/* closing verse panel (the guide's last page) */
+.city{background:var(--revival);color:var(--cream)}
+.city .shell{padding-top:clamp(52px,8vw,112px);padding-bottom:clamp(52px,8vw,112px)}
+.city .verse{font-family:var(--display);font-weight:700;font-size:clamp(2rem,1.3rem + 3.2vw,4.2rem);line-height:1.08;max-width:18ch;color:#fff}
+.city .ref{margin-top:16px;font-family:var(--display);font-style:italic;font-weight:600;font-size:1.25rem;color:var(--on-red-soft)}
+
+/* ---------- footer ---------- */
+.foot{background:var(--foundry);color:var(--on-navy-soft)}
+.foot .shell{padding-top:clamp(40px,5vw,64px);padding-bottom:36px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:32px;align-items:start}
+.foot .fmark img{width:min(100%,280px)}
+.foot h4{margin:0 0 10px;font-size:1.05rem;color:var(--cream)}
+.foot p,.foot a{font-size:.95rem;line-height:1.7}
+.foot a{color:var(--cream);text-decoration:none;transition:color .2s}
+.foot a:hover{color:#fff}
+.foot address{font-style:normal}
+.foot .colophon{margin-top:44px;padding-top:18px;border-top:1px solid rgba(249,247,236,.25);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.86rem}
+@media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot-grid{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
