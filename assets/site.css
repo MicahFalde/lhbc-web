@@ -79,7 +79,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .arrive-in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center}
 @media (max-width:860px){.arrive-in{grid-template-columns:1fr;gap:36px}}
 .arrive .where{font-family:var(--display);font-weight:700;color:var(--revival);font-size:clamp(1.25rem,1rem + 1.2vw,1.9rem);letter-spacing:.02em}
-.arrive h1{font-size:clamp(2.6rem,1.4rem + 5vw,5.8rem);line-height:.98;margin-top:10px;max-width:12ch}
+.arrive h1{font-size:clamp(2.6rem,1.2rem + 4.4vw,5rem);line-height:1;margin-top:10px;max-width:16ch}
 .arrive .place{margin-top:clamp(20px,3vw,32px);font-size:clamp(1.05rem,1rem + .4vw,1.3rem);color:var(--ink-soft);max-width:44ch;line-height:1.5}
 .arrive .place b{color:var(--foundry);font-weight:600}
 .arrive .btn{margin-top:clamp(24px,3vw,36px)}
@@ -125,7 +125,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* ---------- page heads and sections ---------- */
 .page-head{padding:clamp(48px,8vw,104px) 0 clamp(28px,4vw,52px)}
-.page-head h1{font-size:clamp(2.3rem,1.5rem + 3.6vw,4.6rem);max-width:16ch}
+.page-head h1{font-size:clamp(2.2rem,1.4rem + 3vw,4rem);max-width:22ch}
 .page-head .lede{margin-top:18px;font-weight:500;font-size:clamp(1.1rem,1rem + .5vw,1.4rem);line-height:1.4;color:var(--ink-soft);max-width:48ch}
 .sec{padding:clamp(48px,7vw,96px) 0}
 .sec.tight{padding-top:0}
