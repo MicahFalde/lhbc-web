@@ -138,9 +138,8 @@ body[data-path="/"] .top{border-bottom:0}
 .sec{padding:clamp(48px,7vw,96px) 0}
 .sec.tight{padding-top:0}
 .sec.deep{background:var(--cream-deep)}
-.head{display:flex;align-items:baseline;gap:18px;border-bottom:1.5px solid var(--foundry);padding-bottom:14px;margin-bottom:clamp(28px,4vw,52px)}
-.head .no{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--revival)}
-.head .lbl{font-weight:500;font-size:.98rem;color:var(--ink-soft)}
+.head{border-bottom:1.5px solid var(--foundry);padding-bottom:14px;margin-bottom:clamp(28px,4vw,52px)}
+.head .lbl{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--foundry)}
 h2{font-size:clamp(1.9rem,1.4rem + 2.2vw,3.2rem)}
 h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 .lede{font-weight:500;font-size:clamp(1.1rem,1rem + .5vw,1.4rem);line-height:1.4;color:var(--foundry)}
