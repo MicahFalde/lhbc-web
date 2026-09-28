@@ -205,6 +205,18 @@ h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 .listen a span{display:block;font-size:.95rem;margin-top:6px;opacity:.85}
 @media (max-width:760px){.listen{grid-template-columns:1fr}}
 
+/* study sheets */
+.study{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,3vw,40px);align-items:start}
+.sheets{border-top:1.5px solid var(--foundry)}
+.sheets a{display:block;padding:16px 4px;border-bottom:1px solid var(--cream-line);text-decoration:none;color:var(--foundry);transition:background .2s}
+.sheets a:hover{background:var(--cream-deep)}
+.sheets a[aria-current="true"]{box-shadow:inset 4px 0 0 var(--revival);padding-left:14px}
+.sheets b{display:block;font-family:var(--display);font-weight:700;font-size:1.15rem}
+.sheets span{display:block;font-size:.92rem;color:var(--ink-soft);margin-top:3px}
+.viewer iframe{display:block;width:100%;height:min(78vh,900px);border:1.5px solid var(--foundry);background:var(--cream-deep)}
+.viewer-note{margin-top:12px;font-size:.95rem;color:var(--ink-soft)}
+@media (max-width:860px){.study{grid-template-columns:1fr}.viewer iframe{height:70vh}}
+
 /* give and contact */
 .ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
 .ways>div{border-top:1.5px solid var(--foundry);padding-top:18px}
