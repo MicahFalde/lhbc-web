@@ -84,6 +84,14 @@ ul,ol{margin:0;padding:0;list-style:none}
 .arrive .place b{color:var(--foundry);font-weight:600}
 .arrive .btn{margin-top:clamp(24px,3vw,36px)}
 
+/* the band: the logo's red-over-navy rules, run full-bleed under the header like a road marker */
+.arrive{position:relative}
+.arrive .band{position:absolute;left:0;right:0;top:0;display:grid;gap:5px;pointer-events:none}
+.arrive .band span{display:block;height:4px}
+.arrive .band .b1{background:var(--revival)}
+.arrive .band .b2{background:var(--foundry)}
+body[data-path="/"] .top{border-bottom:0}
+
 /* the marker strip: navy, hours on one line */
 .strip{background:var(--foundry);color:var(--cream)}
 .strip ul{padding:14px var(--gut);max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:8px clamp(18px,3vw,44px);font-weight:600;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;text-align:center}
@@ -204,6 +212,17 @@ h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 .listen a b{display:block;font-family:var(--display);font-weight:700;font-size:1.3rem}
 .listen a span{display:block;font-size:.95rem;margin-top:6px;opacity:.85}
 @media (max-width:760px){.listen{grid-template-columns:1fr}}
+
+/* recent messages (filled by site.js) */
+.recent{padding-bottom:0}
+.episodes{border-top:1.5px solid var(--foundry)}
+.episodes a{display:grid;grid-template-columns:72px 1fr auto;gap:18px;align-items:baseline;padding:16px 4px;border-bottom:1px solid var(--cream-line);text-decoration:none;color:var(--foundry);transition:background .2s}
+.episodes a:hover{background:var(--cream-deep)}
+.episodes .d{font-family:var(--display);font-weight:700;color:var(--revival)}
+.episodes .t b{display:block;font-weight:600}
+.episodes .t span{display:block;font-size:.92rem;color:var(--ink-soft)}
+.episodes .m{font-size:.9rem;color:var(--ink-soft);white-space:nowrap}
+@media (max-width:640px){.episodes a{grid-template-columns:60px 1fr}.episodes .m{display:none}}
 
 /* study sheets */
 .study{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,3vw,40px);align-items:start}
