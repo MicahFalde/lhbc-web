@@ -23,7 +23,7 @@ p{margin:0}
 /* Ed (2026-09-28): straight edges both sides, site-wide. Hyphenation keeps the word gaps even;
    the last line of a paragraph stays left so short trailing lines are not stretched. */
 p,.articles li,.card span,.sheets span,.episodes .t span{text-align:justify;text-align-last:left;hyphens:auto;-webkit-hyphens:auto}
-.strip li,.colophon span,.hours dd,.arrive .where,.card small,.refs,.viewer-note{text-align:left}
+.strip li,.colophon span,.hours dd,.arrive .where,.card small,.refs,.viewer-note,.foot p{text-align:left}
 a{color:inherit}
 img{display:block;max-width:100%;height:auto}
 ul,ol{margin:0;padding:0;list-style:none}
