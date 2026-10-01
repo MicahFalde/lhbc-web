@@ -7,7 +7,7 @@
 
 :root{
   --foundry:#1E3250; --foundry-deep:#172742; --revival:#C7261D; --revival-deep:#A81E17;
-  --linen:#FFFFFF; --dusty:#8D999B; --cream:#F9F7EC; --cream-deep:#EEEADA; --cream-line:#D9D3BC;
+  --linen:#FFFFFF; --dusty:#8D999B; --cream:#FFFFFF; --cream-deep:#F0F3F7; --cream-line:#D3DAE4;
   --ink:#1E3250; --ink-soft:#4C5A73; --on-navy-soft:#B9C2D2; --on-red-soft:rgba(255,255,255,.82);
   --display:'Erode',ui-serif,Georgia,'Times New Roman',serif;
   --sans:'Switzer',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
