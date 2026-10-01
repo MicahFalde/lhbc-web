@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /edit/
+Sitemap: https://lincolnhighwaybaptist.org/sitemap.xml
