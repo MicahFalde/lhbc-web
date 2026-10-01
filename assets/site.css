@@ -36,7 +36,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 :focus-visible{outline:2px solid var(--revival);outline-offset:3px}
 
 /* ---------- header: one logo, small, top left; tabs in line (Cam, 2026-09-09) ---------- */
-.top{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:1.5px solid var(--foundry)}
+.top{position:sticky;top:0;z-index:50;background:var(--cream)}
 .top-in{max-width:var(--max);margin:0 auto;padding:0 var(--gut);min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .mark{display:block;flex:none;padding:14px 0}
 .mark img{width:clamp(200px,24vw,262px);height:auto}
@@ -90,10 +90,10 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* the band: the logo's red-over-navy rules, run full-bleed under the header like a road marker */
 .arrive{position:relative}
-.arrive .band{position:absolute;left:0;right:0;top:0;display:grid;gap:5px;pointer-events:none}
-.arrive .band span{display:block;height:4px}
-.arrive .band .b1{background:var(--revival)}
-.arrive .band .b2{background:var(--foundry)}
+.top .band{display:grid;gap:4px;pointer-events:none}
+.top .band span{display:block;height:4px}
+.top .band .b1{background:var(--revival)}
+.top .band .b2{background:var(--foundry)}
 body[data-path="/"] .top{border-bottom:0}
 
 /* the marker strip: navy, hours on one line */
@@ -238,7 +238,7 @@ h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 .articles{max-width:76ch}
 @media (min-width:1000px){
   .statement .shell{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(40px,5vw,96px);align-items:start}
-  .statement .head{position:sticky;top:96px;margin-bottom:0;border-bottom:0;border-top:1.5px solid var(--foundry);padding:18px 0 0}
+  .statement .head{position:sticky;top:108px;margin-bottom:0;border-bottom:0;border-top:1.5px solid var(--foundry);padding:18px 0 0}
   .statement .head h2{font-size:clamp(1.6rem,1.2rem + 1.4vw,2.4rem);padding-bottom:0}
   .articles{max-width:none}
 }
