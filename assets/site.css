@@ -159,6 +159,12 @@ h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 .mv>div+div{border-top:1.5px solid var(--foundry)}
 .mv h3{margin-bottom:10px}
 .mv p{max-width:64ch}
+@media (min-width:861px){
+  .mv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,64px)}
+  .mv>div,.mv>div:first-child{padding:0}
+  .mv>div+div{border-top:0;border-left:1.5px solid var(--foundry);padding-left:clamp(28px,3vw,48px)}
+  .mv p{max-width:none}
+}
 
 /* the red "Go" panel */
 .go-panel{background:var(--revival);color:var(--cream)}
@@ -230,6 +236,12 @@ h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 .jump a{font-weight:600;font-size:.95rem;color:var(--revival);text-decoration:none;border-bottom:1.5px solid rgba(199,38,29,.35)}
 .jump a:hover{border-color:var(--revival)}
 .articles{max-width:76ch}
+@media (min-width:1000px){
+  .statement .shell{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(40px,5vw,96px);align-items:start}
+  .statement .head{position:sticky;top:96px;margin-bottom:0;border-bottom:0;border-top:1.5px solid var(--foundry);padding:18px 0 0}
+  .statement .head h2{font-size:clamp(1.6rem,1.2rem + 1.4vw,2.4rem);padding-bottom:0}
+  .articles{max-width:none}
+}
 .articles h3{margin-top:clamp(36px,5vw,56px);margin-bottom:12px;color:var(--revival)}
 .articles h3:first-child{margin-top:0}
 .articles p{margin-top:.9em}
