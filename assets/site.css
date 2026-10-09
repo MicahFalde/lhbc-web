@@ -20,9 +20,10 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
   font-size:clamp(1rem,.95rem + .25vw,1.125rem);line-height:1.6;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;letter-spacing:-.005em;color:var(--foundry);text-wrap:balance}
 p{margin:0}
-/* Ed (2026-09-28): straight edges both sides, site-wide. Hyphenation keeps the word gaps even;
-   the last line of a paragraph stays left so short trailing lines are not stretched. */
-p,.articles li,.card span,.sheets span,.episodes .t span{text-align:justify;text-align-last:left;hyphens:auto;-webkit-hyphens:auto}
+/* Ed (2026-09-28): straight edges both sides, site-wide. Ed (2026-10-09): never split a word with a
+   hyphen; the line takes wider spaces instead. text-wrap:pretty evens the lines out where supported.
+   The last line of a paragraph stays left so short trailing lines are not stretched. */
+p,.articles li,.card span,.sheets span,.episodes .t span{text-align:justify;text-align-last:left;hyphens:manual;-webkit-hyphens:manual;text-wrap:pretty}
 .strip li,.colophon span,.hours dd,.arrive .where,.card small,.refs,.viewer-note,.foot p{text-align:left}
 a{color:inherit}
 img{display:block;max-width:100%;height:auto}
@@ -278,7 +279,7 @@ h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.8rem)}
 .contact-grid h3{font-size:1.4rem;margin-bottom:8px}
 .contact-grid p{max-width:40ch}
 .contact-grid address{font-style:normal;line-height:1.6}
-.contact-grid .big{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,1.1rem + .9vw,1.8rem);color:var(--revival);text-decoration:none;display:inline-block;margin:6px 0 10px;word-break:break-all}
+.contact-grid .big{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,1.1rem + .9vw,1.8rem);color:var(--revival);text-decoration:none;display:inline-block;margin:6px 0 10px;overflow-wrap:anywhere}
 .contact-grid .big:hover{color:var(--revival-deep)}
 @media (max-width:760px){.contact-grid{grid-template-columns:1fr}}
 
